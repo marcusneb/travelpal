@@ -169,3 +169,15 @@ button a:hover {
         justify-self: center;
     }
 }
+@media (max-width: 375px) {
+
+    form {
+        grid-template-columns: 1fr;
+    }
+
+    button[type="submit"] {
+        grid-column: 1 / -1;
+        justify-self: center;
+    }
+}
+

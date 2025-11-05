@@ -216,3 +216,9 @@ a {
         grid-template-columns: 1fr;
     }
 }
+
+@media (max-width: 375px) {
+    .checkbox-grid {
+        grid-template-columns: 1fr;
+    }
+}
