@@ -1,0 +1,218 @@
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  font-family: system-ui, Arial, sans-serif;
+  background: #fafaff;
+  color: #111;
+}
+
+main {
+  max-width: 1100px;
+  margin: 32px auto;
+  padding: 0 16px;
+  display: flex;
+  gap: 32px;
+  }
+
+
+aside{
+  width:260px;
+  background:#f3f2ff;
+  border-radius:26px;
+  padding:28px 22px;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  margin-left:0;
+}
+
+aside ol{
+  display:flex;
+  flex-direction:column;
+  gap:28px;
+  position:relative;
+}
+
+aside .step{
+  display:grid;
+  grid-template-columns:40px 1fr;
+  align-items:center;
+  gap:12px;
+  color:#181a32;
+  position:relative;
+}
+
+aside .number{
+  width:36px; 
+  height:36px;
+  display:grid; 
+  place-items:center;
+  border-radius:12px;
+  background:#ffffff;
+  color:#A0A3BD;
+  font-weight:700;
+}
+
+aside .number_active{
+  width:36px; height:36px;
+  display:grid; place-items:center;
+  border-radius:12px;
+  background:#2b22ff;
+  color:#ffffff;
+  font-weight:700;
+}
+
+aside .title{
+  font-weight:700;
+  line-height:1.1;
+}
+aside .description{
+  margin:4px 0 0;
+  font-size:13px;
+  color:#7c7fa3;
+  line-height:1.35;
+}
+
+section {
+  flex: 1;
+}
+
+section header {
+  text-align: center;
+  margin-bottom: 20px;
+}
+section header h1 {
+  margin: 0 0 8px;
+  font-size: 32px;
+}
+section header p {
+  margin: 0 auto;
+  max-width: 560px;
+  color: #5a5a7a;
+}
+
+form{
+  background:#fff;
+  border-radius:20px;
+  padding:28px;
+  max-width:720px;
+  margin:24px auto 0;
+  display:grid;
+  grid-template-columns:1fr;
+  row-gap:14px;
+  position:relative;
+}
+
+form::before{
+  content:"Preferences";
+  position:absolute;
+  top:14px; 
+  left:28px;
+  font-weight:700; 
+  font-size:18px;
+}
+form{ padding-top:56px; }
+
+label{
+  font-size:14px;
+  font-weight:600;
+  color:#222;
+  margin-top:6px;
+}
+
+input[type="text"],
+select,
+input[type="date"]{
+  width:100%;
+  padding:12px 14px;
+  border:1px solid #e2e2f3;
+  border-radius:10px;
+  font-size:14px;
+}
+input:focus, select:focus{
+  border-color:#766bff;
+}
+
+.checkbox-grid{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:10px 24px;
+}
+.checkbox-grid label{
+  font-weight:400;
+  display:flex;
+  align-items:center;
+  gap:8px;
+}
+
+.range-row{
+  display:flex;
+  align-items:center;
+  gap:12px;
+}
+.range-row output{
+  margin-left:auto;
+  font-weight:600;
+  color:#2b22ff;
+  background:#f3f2ff;
+  padding:6px 10px;
+  border-radius:8px;
+  font-size:13px;
+}
+
+button[type="submit"]{
+  justify-self:end;
+  margin-top:6px;
+  padding:12px 22px;
+  background:#2b22ff;
+  color:#fff;
+  border-radius:12px;
+  font-weight:700;
+  cursor:pointer;
+}
+
+/* radio buttons */
+.radio-fieldset {
+      border: none;
+      padding: 0;
+      margin: 0;
+      margin-top: 6px;
+  }
+
+.radio-fieldset legend {
+    font-size: 14px;
+    font-weight: 600;
+    color: #222;
+    padding: 0;
+    margin-bottom: 10px;
+}
+
+.radio-option {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 12px;
+}
+
+.radio-option label {
+    font-weight: 400;
+    margin-top: 0;
+    cursor: pointer;
+}
+
+.radio-option input[type="radio"] {
+    width: auto;
+    margin: 0;
+    cursor: pointer;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+}
+
+@media (max-width: 768px) {
+    .checkbox-grid {
+        grid-template-columns: 1fr;
+    }
+}

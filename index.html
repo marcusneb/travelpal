@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang = "en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/index.css">
+    <title>Home - TravelPal</title>
+</head>
+<body>
+    <main>
+            <aside>
+                <ol>
+                    <li class="step">
+                      <span class="number_active">1</span>
+                      <div>
+                        <div class="title">Personal information</div>
+                        <div class="description">Tell us who you are to get started.</div>
+                      </div>
+                    </li>
+
+                    <li class="step">
+                    <span class="number">2</span>
+                    <div>
+                        <div class="title">Preferences</div>
+                        <div class="description">Tell us where would you prefer to go<br>with your TravelPal</div>
+                    </div>
+                    </li>
+                </ol>
+            </aside>
+
+       <!---Main content-->
+       <section>
+         <header>
+            <h1>Find a TravelPal!</h1>
+            <p>Tell us a bit about yourself and find a travel buddy for your next adventure!</p> <!--Make sure to divide this text from styling bc no <br> allowed-->
+         </header>
+         <form action = "preferences.html">
+             
+      <label for="full-name">
+     Full name <span aria-hidden="true">*</span>
+    </label>
+    <input type="text" id="full-name" name="full-name" placeholder="e.g., John Carter" required aria-required="true" pattern="[A-Za-z\s]+" title="Please enter letters only (A-Z, a-z)">
+
+
+            <label for = "birthday">Add your birth date<span aria-hidden = "true">*</span></label>
+            <input type = "date" id = "birthday" name = "birthday"  required aria-required="true">  <!--I added a birth date also i think its a good ideea-->
+
+            <label for = "email">Email<span aria-hidden = "true">*</span></label>
+            <input type = "email" id = "email" name = "email" placeholder="Enter your email" required aria-required = "true" pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}" title="Please enter a valid email address (e.g., name@example.com)">
+
+            <label for = "phone">Phone number<span aria-hidden="true">*</span></label>
+            <input type = "tel" id = "phone" name = "phone" placeholder="Exp. +1 234 567 8901" aria-required = "true" required>
+
+            <label for = "country">Where are you from?<span aria-hidden = "true">*</span></label>
+            <input type = "text" id = "country" name = "country" placeholder="Exp. Denmark" aria-required="true" required>
+
+            <label for = "profile-pic">Upload your profile photo<span aria-hidden="true">*</span></label>
+            <input type = "file" id = "profile-pic" name = "profile-pic" accept="image/*" aria-required="true" required>
+
+            <button type ="submit">Continue</button>
+         </form>
+       </section>     
+    </main>
+
+</body>
+</html>

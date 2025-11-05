@@ -1,0 +1,171 @@
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  font-family: system-ui, Arial, sans-serif;
+  background: #fafaff;
+  color: #111;
+}
+
+main {
+  max-width: 1100px;
+  margin: 32px auto;
+  padding: 0 16px;
+  display: flex;
+  gap: 32px;
+  }
+
+
+aside{
+  width:260px;
+  background:#f3f2ff;
+  border-radius:26px;
+  padding:28px 22px;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+}
+
+aside ol{
+  display:flex;
+  flex-direction:column;
+  gap:28px;
+  position:relative;
+}
+
+aside .step{
+  display:grid;
+  grid-template-columns:40px 1fr;
+  align-items:center;
+  gap:12px;
+  color:#181a32;
+  position:relative;
+}
+
+aside .number{
+  width:36px; 
+  height:36px;
+  display:grid; 
+  place-items:center;
+  border-radius:12px;
+  background:#ffffff;
+  color:#A0A3BD;
+  font-weight:700;
+}
+
+aside .number_active{
+  width:36px; 
+  height:36px;
+  display:grid; 
+  place-items:center;
+  border-radius:12px;
+  background:#2b22ff;
+  color:#ffffff;
+  font-weight:700;
+}
+
+aside .title{
+  font-weight:700;
+  line-height:1.1;
+}
+aside .description{
+  margin:4px 0 0;
+  font-size:13px;
+  color:#7c7fa3;
+  line-height:1.35;
+}
+
+section {
+  flex: 1;
+}
+
+section header {
+  text-align: center;
+  margin-bottom: 20px;
+}
+section header h1 {
+  margin: 0 0 8px;
+  font-size: 32px;
+}
+section header p {
+  margin: 0 auto;
+  max-width: 560px;
+  color: #5a5a7a;
+}
+
+form {
+  background: #fff;
+  border-radius: 20px;
+  padding: 28px;
+  max-width: 720px;
+  margin: 24px auto 0;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 24px;
+  row-gap: 10px;
+  position: relative;
+}
+
+form::before {
+  content: "Personal information";
+  position: absolute;
+  top: 14px;
+  left: 28px;
+  font-weight: 700;
+  font-size: 18px;
+}
+form { padding-top: 56px; }
+
+label {
+  display: block;
+  font-size: 14px;
+  font-weight: 600;
+  color: #222;
+  margin-top: 8px;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+input[type="date"],
+input[type="file"] {
+  width: 100%;
+  padding: 12px 14px;
+  border: 1px solid #e2e2f3;
+  border-radius: 10px;
+  font-size: 14px;
+}
+
+button[type="submit"]{
+  grid-column: 2 / 3;
+  justify-self: end;
+  margin-top: 10px;
+  padding: 12px 22px;
+  background: #2b22ff;
+  color: #fff;
+  border: none;
+  border-radius: 12px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+button a {
+  color: white;
+  text-decoration: none;
+  font-weight: 700;
+}
+
+button a:hover {
+  color: white;
+}
+
+@media (max-width: 768px) {
+
+    form {
+        grid-template-columns: 1fr;
+    }
+
+    button[type="submit"] {
+        grid-column: 1 / -1;
+        justify-self: center;
+    }
+}

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/preferences.css">
+    <title>Preferences - TravelPal</title>
+</head>
+<body>
+    <main>
+
+           <aside>
+                <ol>
+                    <li class="step">
+                      <span class="number_active"><a href = "index.html">1</a></span>
+                      <div>
+                        <div class="title">Personal information</div>
+                        <div class="description">Tell us who you are to get started.</div>
+                      </div>
+                    </li>
+
+                    <li class="step">
+                    <span class="number_active">2</span>
+                    <div>
+                        <div class="title">Preferences</div>
+                        <div class="description">Tell us where would you prefer to go<br>with your TravelPal</div>
+                    </div>
+                    </li>
+                </ol>
+            </aside>
+            
+       <!---Main content-->
+       <section>
+         <header>
+            <h1>Set Your Travel Preferences</h1>
+            <p>Help us match you with the perfect travel buddy by sharing your preferences!</p> 
+         </header>
+         <form action = "#" method="post" enctype = "multipartnformation">
+             <label for = "destinations">Preferred Destinations<span aria-hidden = "true">*</span></label>
+            <input type = "text" id = "destinations" name = "destinations" placeholder="Exp. Japan, Italy, Brazil" required aria-required = "true">
+
+             <fieldset class="radio-fieldset">
+                 <legend>Travel Style<span aria-hidden="true">*</span></legend>
+
+                 <div class="radio-option">
+                     <input type="radio" id="adventure" name="travel-style" value="adventure" required>
+                     <label for="adventure">Adventure</label>
+                 </div>
+
+                 <div class="radio-option">
+                     <input type="radio" id="relaxation" name="travel-style" value="relaxation">
+                     <label for="relaxation">Relaxation</label>
+                 </div>
+
+                 <div class="radio-option">
+                     <input type="radio" id="cultural" name="travel-style" value="cultural">
+                     <label for="cultural">Cultural Exploration</label>
+                 </div>
+
+                 <div class="radio-option">
+                     <input type="radio" id="nature" name="travel-style" value="nature">
+                     <label for="nature">Nature and Wildlife</label>
+                 </div>
+             </fieldset>
+
+            
+        <label for="budget">Budget Range<span aria-hidden="true">*</span></label>
+        <input type="range" id="budget" name="budget" min="1000" max="5000" step="500" value="3000" required>
+        <output id="budgetOutput">$3000</output>   <!---We can't change the output of the slider cause we need js so, if you think we can change it-->
+
+
+            <label for = "travel-dates">Preferred Travel Dates<span aria-hidden="true">*</span></label>
+            <input type = "date" id = "travel-dates" name = "travel-dates" placeholder="Exp. June 1 - June 15, 2024" aria-required="true" required>
+
+            <label for = "travel-dates">Return Date<span aria-hidden="true">*</span></label>
+            <input type = "date" id = "travel-dates" name = "travel-dates" placeholder="Exp. June 1 - June 15, 2024" aria-required="true" required>
+
+            <button type ="submit">Find My TravelPal</button>
+         </form>
+       </section>     
+    </main>
+</body>   
+</html>
