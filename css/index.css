@@ -1,3 +1,4 @@
+/* Index.css with added responsive breakpoints */
 * { box-sizing: border-box; }
 body {
   margin: 0;
@@ -12,71 +13,63 @@ main {
   padding: 0 16px;
   display: flex;
   gap: 32px;
-  }
-
-
-aside{
-  width:260px;
-  background:#f3f2ff;
-  border-radius:26px;
-  padding:28px 22px;
-  display:flex;
-  flex-direction:column;
-  justify-content:center;
 }
 
-aside ol{
-  display:flex;
-  flex-direction:column;
-  gap:28px;
-  position:relative;
+aside {
+  width: 260px;
+  background: #f3f2ff;
+  border-radius: 26px;
+  padding: 28px 22px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
-aside .step{
-  display:grid;
-  grid-template-columns:40px 1fr;
-  align-items:center;
-  gap:12px;
-  color:#181a32;
-  position:relative;
+aside ol {
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
 }
 
-aside .number{
-  width:36px; 
-  height:36px;
-  display:grid; 
-  place-items:center;
-  border-radius:12px;
-  background:#ffffff;
-  color:#A0A3BD;
-  font-weight:700;
+aside .step {
+  display: grid;
+  grid-template-columns: 40px 1fr;
+  align-items: center;
+  gap: 12px;
+  color: #181a32;
 }
 
-aside .number_active{
-  width:36px; 
-  height:36px;
-  display:grid; 
-  place-items:center;
-  border-radius:12px;
-  background:#2b22ff;
-  color:#ffffff;
-  font-weight:700;
+aside .number, aside .number_active {
+  width: 36px;
+  height: 36px;
+  display: grid;
+  place-items: center;
+  border-radius: 12px;
+  font-weight: 700;
 }
 
-aside .title{
-  font-weight:700;
-  line-height:1.1;
-}
-aside .description{
-  margin:4px 0 0;
-  font-size:13px;
-  color:#7c7fa3;
-  line-height:1.35;
+aside .number {
+  background: #ffffff;
+  color: #A0A3BD;
 }
 
-section {
-  flex: 1;
+aside .number_active {
+  background: #2b22ff;
+  color: #ffffff;
 }
+
+aside .title {
+  font-weight: 700;
+  line-height: 1.1;
+}
+
+aside .description {
+  margin-top: 4px;
+  font-size: 13px;
+  color: #7c7fa3;
+}
+
+section { flex: 1; }
 
 section header {
   text-align: center;
@@ -100,8 +93,7 @@ form {
   margin: 24px auto 0;
   display: grid;
   grid-template-columns: 1fr 1fr;
-  column-gap: 24px;
-  row-gap: 10px;
+  gap: 24px;
   position: relative;
 }
 
@@ -116,7 +108,6 @@ form::before {
 form { padding-top: 56px; }
 
 label {
-  display: block;
   font-size: 14px;
   font-weight: 600;
   color: #222;
@@ -135,7 +126,7 @@ input[type="file"] {
   font-size: 14px;
 }
 
-button[type="submit"]{
+button[type="submit"] {
   grid-column: 2 / 3;
   justify-self: end;
   margin-top: 10px;
@@ -151,33 +142,62 @@ button[type="submit"]{
 button a {
   color: white;
   text-decoration: none;
-  font-weight: 700;
 }
 
-button a:hover {
-  color: white;
+/* --- RESPONSIVE BREAKPOINTS --- */
+
+/* 1024px */
+@media (max-width: 1024px) {
+  main {
+    gap: 24px;
+  }
+  aside {
+    width: 220px;
+    padding: 24px 18px;
+  }
+  section header h1 {
+    font-size: 28px;
+  }
 }
 
+/* 768px */
 @media (max-width: 768px) {
+  main {
+    flex-direction: column;
+    max-width: 600px;
+  }
+  aside {
+    width: 100%;
+    flex-direction: row;
+    padding: 18px;
+    gap: 20px;
+  }
+  aside ol {
+    flex-direction: row;
+    gap: 18px;
+  }
+  aside .step {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
 
-    form {
-        grid-template-columns: 1fr;
-    }
+  form {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
 
-    button[type="submit"] {
-        grid-column: 1 / -1;
-        justify-self: center;
-    }
+  button[type="submit"] {
+    grid-column: 1 / -1;
+    justify-self: center;
+    width: 100%;
+  }
 }
+
+/* 375px */
 @media (max-width: 375px) {
-
-    form {
-        grid-template-columns: 1fr;
-    }
-
-    button[type="submit"] {
-        grid-column: 1 / -1;
-        justify-self: center;
-    }
+  section header h1 { font-size: 22px; }
+  form { padding: 20px; border-radius: 14px; }
+  label { font-size: 13px; }
+  input { font-size: 13px; }
+  button[type="submit"] { width: 100%; }
 }
-
